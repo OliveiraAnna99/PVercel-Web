@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>   
+
+   <head>
+
+      <meta charset="UTF-8">      
+
+   </head>
+
+   
+
+   <body>
+
+      <div><a href="javascript:carregarDiv(cervejas)" id="botaoCarregar">Carregando cervejas...</a></div>
+ 	   <div><a href="javascript:carregarDiv(roupas)"> Carregando roupas...<a/></div>
+      <div id="meu amor"></div>            
+
+   </body>   
+
+   
+
+   <script>
+      let cervejas = ["Guiness", "Desperados", "Becks"]
+ 	   let roupas = ["Blusa", "Camiseta", "Short Jeans"]
+	   let cervs = []
+      
+	
+      // const transformar = item => `<h1>${item}</h1>`
+    	//let cervs = item => `<h1>${item}</h1>`;
+      //function carregarDiv(){
+
+
+
+	   const carregarDiv = (cervs) => {
+         const div = document.getElementById("meu amor")
+         const cervejasHtml = cervs.map(item => `<h1>${item}</h1>`) 
+         div.innerHTML = `${cervejasHtml.join("\n")}`
+      }
+
+      
+
+      let botao = document.getElementById("botaoCarregar")
+      botao.addEventListener("click", ()=> carregarDiv(cervejas))  
+	   let botao2 = document.getElementById("botaoCarregar2")
+      botao2.addEventListener("click", ()=> carregarDiv(roupas))  
+	              
+           
+
+   </script>
+
+</html>

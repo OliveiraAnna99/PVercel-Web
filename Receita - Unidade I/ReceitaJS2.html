@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>   
+
+   <head>
+
+      <meta charset="UTF-8">      
+
+   </head>
+
+   
+
+   <body>
+
+      <div id="meu amor"><button id="botaoCarregar">Carregando cervejas...</button></div>            
+      <button id="btnOrderName">Ordenar por Nome</button>
+      <button id="btnEmbaralhar">Embalharar</button>
+   </body>   
+
+   <style>
+        #cervejas{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: crimson;
+        }
+        #Titulo{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: x-large;
+        }
+   </style>
+
+   <script>
+
+      let cervejas = ["Guiness", "Desperados", "Becks"]
+      function transformar(item){
+
+         return `
+                        <tr>
+                            <td><div id="cervejas">${item}</div></td>
+                        </tr>
+                `
+
+      }
+
+      
+
+      function carregarDiv(){
+
+         let div = document.getElementById("meu amor")
+         //let cervejasHtml = [`<h1>${cervejas[0]}</h1>`,`<h1>${cervejas[1]}</h1>`, `<h1>${cervejas[2]}</h1>`] 
+         let cervejasHtml = cervejas.map(transformar) 
+         div.innerHTML = `<table border='1'> <tr> <td id=Titulo >Cervejas</td> </tr> ${cervejasHtml.join("\n")} </table>`
+        
+      }
+
+      function carregarDiv2(){
+
+        let div = document.getElementById("meu amor")
+        //let cervejasHtml = [`<h1>${cervejas[0]}</h1>`,`<h1>${cervejas[1]}</h1>`, `<h1>${cervejas[2]}</h1>`] 
+        let cervejasHtml = cervejas.map(transformar) 
+        let orderCervejasHTML = cervejasHtml.sort();
+        div.innerHTML = `<table border='1'> <tr> <td id=Titulo >Cervejas</td> </tr> ${cervejasHtml.join("\n")} </table>`
+
+    }
+    function carregarDiv3(){
+
+        let div = document.getElementById("meu amor")
+        let cervejasHtml = cervejas.map(transformar) 
+        let orderCervejasHTML = cervejasHtml.sort(() => Math.random() - 0.5);
+        div.innerHTML = `<table border='1'> <tr> <td id=Titulo >Cervejas</td> </tr> ${cervejasHtml.join("\n")} </table>`
+
+    }
+
+      let botao = document.getElementById("botaoCarregar")
+      botao.addEventListener("click", carregarDiv)       
+     
+      
+      let botao2 = document.getElementById("btnOrderName")
+      botao2.addEventListener("click", carregarDiv2)      
+
+      let botao3 = document.getElementById("btnEmbaralhar")
+      botao3.addEventListener("click", carregarDiv3)  
+   </script>
+
+</html>

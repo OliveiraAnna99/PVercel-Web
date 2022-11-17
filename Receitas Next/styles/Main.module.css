@@ -1,0 +1,415 @@
+/* Navbar Styles */
+
+html:not(.important){
+    background-color: rgb(14, 2, 2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar ul li {
+  float: left;
+}
+
+.navbar ul li a {
+  border-radius: 22px;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+
+  background-color:  rgb(252, 185, 62);
+  color:aliceblue;
+  transition: ease-in-out 0.4s;
+}
+.navbar ul li a:active {
+  color: aliceblue;
+  background-color:rgb(255, 179, 37);
+  transition: circle ease-out 3s;
+}
+
+/* Primeiro Bloco de Informações da Pagina Home*/
+.introHome{
+  height: 450px;
+  width: 100%;
+  background-color: antiquewhite;
+
+}
+ .cabecalhoHome{
+  color: rgb(0, 0, 0);
+  padding-left: 20%;
+  margin-top: 0;
+  padding-top: 10%;
+}
+h1:not(.important){
+  font-size: 5em;
+}
+.titleHome, .subtitleHome{
+  color: rgb(0, 0, 0);
+  padding-left: 20%;
+  margin-top: 0;
+  display: flex;
+
+
+}
+/* Primeiro Bloco > Receitas*/
+.introReceita{
+  height: 450px;
+  width: 100%;
+  margin-top: 10%;
+  color: rgb(255, 179, 37);
+  text-align: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+      background-color: #4abd4e; /* Green */
+      color: white;
+    }
+
+    
+.navbar ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: transparent;
+    
+  }
+
+  .textInfo{
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    width: 60%;
+  }
+  
+  .textInfo2{
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    
+  }
+  
+ .gif{
+   width: 50%;
+   display: flex;
+ }
+img:not(.important){
+  margin-left: -106%;
+  margin-top: 7%;
+}
+
+  .table th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.circle{
+  background-color: rgb(252, 185, 62);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+  margin-top: -27%;
+  width: 280px;
+  height: 450px;
+  margin-left: 80%;
+
+}
+
+.btnCircle{
+  position: absolute;
+  background-color: rgb(62, 176, 252);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 2% ;
+  display: flex;
+  flex-direction: row;
+  animation-name: ico;
+}
+@keyframes ico{
+  0% {margin-left: 3%}
+  25% {margin-left: 23%}
+  50% {margin-left: 43%}
+
+}
+.gifAnimate{
+  margin-top: -20%;
+  display: flex;
+  flex-direction: row;
+}
+
+.gif{
+  display: flex;
+  
+  padding-left: 145%;
+  width: 20%;
+ 
+}
+.iconBtn{
+  text-align: 30px;
+}
+
+.modelCalculadora{
+  position: absolute;
+  background-color: rgb(6, 24, 24);
+  width: 200px;
+  height: 412.6px;
+  margin-left: 70%;
+  border-radius: 22px;
+}
+
+.btnAc{
+  position: relative;
+  background-color: #04AA6D;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 200px;
+  margin-left: 14px;
+  text-align: center;
+  display: flex;
+
+}
+.textBtnCalc{
+  margin-left: 40%;
+  margin-top: 25%;
+  color: aliceblue;
+}
+.btnNumber{
+  background-color: rgb(49, 31, 31);
+  margin-top: 3px;
+  margin-left: 14px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+.btnNumber2{
+  background-color: rgb(49, 31, 31);
+  margin-top: 3px;
+  margin-left: 4px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.btnOperation{
+  position: relative;
+  background-color: #3650e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 200px;
+  margin-left: 4px;
+  text-align: center;
+  display: flex;
+
+}
+
+.btnOperation2{
+  position: relative;
+  background-color: #3650e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  margin-left: 4px;
+  text-align: center;
+  display: flex;
+
+}
+
+
+.btnOperation3{
+  position: relative;
+  background-color: #102597;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  margin-left: 4px;
+  text-align: center;
+  display: flex;
+
+}
+
+.btnCalcRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.contentCalc{
+  display: flex;
+  flex-direction: row;
+}
+.btnCalcColumn{
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+}
+
+input:not(.important){
+  position: absolute;
+  left: 50%;
+  margin-top: 5%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  border: solid 3px rgb(252, 185, 62);
+  outline: none;
+  border-radius: 35px;
+  transition: all 0.5s;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+  display: flex;
+}
+
+input:not(.important)::placeholder{
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+
+}
+input:not(.important):focus::placeholder{
+
+  opacity: 1;
+  
+}
+input:not(.important):hover{
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+  
+}
+
+input:not(.important):focus, input:not(.importante):not(:placeholder-shown){
+  width: 250px;
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+
+}
+
+.resul{
+  margin-top: 14%;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form2{
+  margin-top: 5%;
+
+}
+.botaoSomador{
+  border-radius: 24px;
+  width: 100px;
+  padding: 5px;
+  border-color: transparent;
+  background-color: rgb(255, 179, 37);
+}
+.inp{
+ 
+  left: 50%;
+  margin-top: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  border: solid 3px rgb(252, 185, 62);
+  outline: none;
+  border-radius: 35px;
+  transition: all 0.5s;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+  display: flex;
+}
+
+.inp::placeholder{
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+
+}
+.inp:focus::placeholder{
+
+  opacity: 1;
+  
+}
+.inp:hover{
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+  
+}
+
+.inp:focus, .inp:not(:placeholder-shown){
+  width: 250px;
+  box-shadow: 0 4px 8px rgb(0,0,0,0.2), 0 6px 20px 0  rgb(252, 185, 62);
+
+}
+
+.btnSwitch{
+  margin-top: 5%;
+  border-radius: 24px;
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border-color: transparent;
+  background-color: rgb(255, 179, 37);
+  color: rgb(255, 179, 37);
+}
+.bola{
+  background-color: aliceblue;
+  border-radius: 50%;
+  margin-top: -2px;
+  width: 20px;
+  height: 20px;
+}
+.bola:hover{
+    cursor: pointer;
+}
+
+
+  .bola:active {
+    -webkit-transform: translateX(26px);
+    transition: .4s;
+   
+  }
+  
+/**
+.switch input{
+   opacity: 0;
+   width: 0;
+   height: 0;
+}*/
+/*
+.slider{
+
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  background-color:  rgb(252, 185, 62);
+  border-radius: 34px;
+}*/

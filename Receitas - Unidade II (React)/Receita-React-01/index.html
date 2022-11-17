@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+
+      <title>ReactZero</title>      
+
+   </head>
+
+   <body>
+      <div id="app">
+
+      
+
+      </div>
+
+      <script src="libs/react.js"></script>
+      <script src="libs/react-dom.js"></script>
+      <script src="libs/babel.js"></script>
+      
+      <!-- Ajeitando style #5-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script type="text/babel">
+        //implementando o código da tabela em forma de função #1
+        const TabelaBebidas = () =>{
+         
+          return <div id="app">
+            <table id="tabela" border="1" class="table table-dark">
+              <thead>
+                <tr><th scope="col">Nome</th><th>Preço</th></tr>
+              </thead>
+              <tbody id="body">
+                
+              </tbody>
+            </table>
+          </div>
+        }
+
+        //contruindo função pra exibir o array #4
+        const exibirConteudo = bebidas => {
+          let tbody = document.getElementById('body');
+          const itens = bebidas.map(({nome, preco}) => `<tr><td>${nome}</td><td>${preco}</td></tr>`);
+          tbody.innerHTML = `${itens.join("\n")}`;
+        }
+
+        //contruindo nova função cabecalho #3
+
+        const Cabecalho = () =>{
+          
+          return <div class="card">
+                  <div class="card-body">
+                      <h1 class="card-title"> Minha Tabela de Bebidas </h1>
+                      <h6 class="card-subtitle mb-2 text-muted">Informações acerca das bebidas cadastradas</h6>
+                  </div>
+                 </div>
+        }
+
+        //criando array #4
+        let bebidas = [
+          {
+            nome: 'Agua',
+            preco: '5,00'
+          },
+          {
+            nome: 'Suco de Goiaba',
+            preco: '7,00'
+          },
+          {
+            nome: 'Suco de Maracuja',
+            preco: '7,00'
+          },
+        ];
+        //criando o objeto
+        ReactDOM.render(
+          //chamando a função como primeiro parametro #1
+          //TabelaBebidas() //alterando chamada da função TabelaBebidas() para <TabelaBebidas/> de #2
+          //chamando cabecalho #4
+          //linha 74 button com ação de click
+          <div>
+            <Cabecalho/> 
+            <TabelaBebidas/>
+            <div class="card">
+              <div class="card-body">
+               <input  class="btn btn-primary" type="button" onClick = {() => exibirConteudo(bebidas)} value ="Exibir Tabela"/>
+              </div>
+            </div>
+         
+          </div>
+          ,
+          document.getElementById("app"))
+      </script>
+
+   </body>
+</html>

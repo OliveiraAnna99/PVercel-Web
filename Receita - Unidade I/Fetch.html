@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>   
+
+   <head>
+
+      <meta charset="UTF-8">      
+
+   </head>
+
+
+
+   <body>
+
+       <ul class="navbar-nav bg-gradient-capelli sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+    
+         <td class="text-center">
+              <div class="btn-group">
+                  <a class="btn btn-sm btn-outline-secondary" onclick="carregarCervejas()">
+                     <label> Carregar Cervejas </label>
+                  </a>
+              </div>
+         </td>
+      </ul>
+      <div id="cervejasDiv"></div>  
+      <ul class="navbar-nav bg-gradient-capelli sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+    
+         <td class="text-center">
+              <div class="btn-group">
+                  <a class="btn btn-sm btn-outline-secondary" onclick="infoDiv2()">
+                     <label> Carregar INFO</label>
+                  </a>
+              </div>
+         </td>
+      </ul>
+      <div id="iDiv"></div>  
+
+   </body>   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+   <script>
+
+
+
+      let cervejas = []
+
+      
+
+      //cs é um array de cervejas
+
+      const carregarDiv = cs => {
+
+         const div = document.getElementById("cervejasDiv")
+         const cabecalhoTable = `
+          <div class="card-body">
+             <div class="table-responsive">
+               <table class="table table-striped table-vcenter table-bordered hover" id="dataTable">
+                  <thead>
+                   <tr>
+                     <th class="th-sm">Name</th>
+                     <th class="th-sm">Alcohol</th>
+                     <th class="th-sm">Brand</th>
+                     <th class="th-sm">IBU</th>
+                     <th class="th-sm">Style</th>
+                   </tr>
+            `
+
+         const itensHtml = cs.map( ({name,alcohol, brand, style, ibu}) =>  `
+
+                  <tr>
+                     <th>${name}</th>
+                     <th>${alcohol}</th>
+                     <th>${brand}</th>
+                     <th>${ibu}</th>
+                     <th>${style}</th>
+                   </tr>
+         `)
+      
+         const footTable = `
+            <tfoot>
+             <tr>
+               <th>Name</th>
+               <th>Alcohol</th>
+               <th>Brand</th>
+               <th>IBU</th>
+               <th>Style</th>
+             </tr>
+           </tfoot>
+         </table>
+         `
+
+
+
+
+   
+
+         div.innerHTML = `${cabecalhoTable} ${itensHtml.join("\n")} ${footTable}`
+
+      }
+
+
+      
+ const carregarDiv2 = cs2 => {
+
+         const div2 = document.getElementById("iDiv")
+         const cabecalhoTable2 = `
+          <div class="card-body">
+             <div class="table-responsive">
+               <table class="table table-striped table-vcenter table-bordered hover" id="dataTable">
+                  <thead>
+                   <tr>
+                     <th class="th-sm">Cidade</th>
+                     <th class="th-sm">Rua</th>
+                   </tr>
+            `
+
+         const itensHtml2 = cs2.map( ({city,street_name}) =>  `
+
+                  <tr>
+                     <th>${city}</th>
+                     <th>${street_name}</th>
+                   </tr>
+         `)
+      
+         const footTable2 = `
+            <tfoot>
+             <tr>
+               <th>Cidade</th>
+               <th>Rua</th>
+             </tr>
+           </tfoot>
+         </table>
+         `
+
+
+
+
+   
+
+         div2.innerHTML = `${cabecalhoTable2} ${itensHtml2.join("\n")} ${footTable2}`
+
+      }
+
+      async function carregarCervejas(){
+
+         try{
+            const urlb = new URL("https://random-data-api.com/api/v2/beers?size=3");
+            let res = await fetch(urlb)
+            cervejas = await res.json()
+            carregarDiv(cervejas)
+      
+
+         }catch(err){
+
+            document.getElementById("cervejasDiv").innerHTML = "Fudeu..."
+
+         }
+
+      }
+
+      
+
+ async function infoDiv2(){
+
+         try{
+            const url2 = new URL("https://random-data-api.com/api/address/random_address")
+            let res2 = await fetch(urlb2)
+            info = await res2.json()
+            carregarDiv2(info)
+
+         }catch(err){
+
+            document.getElementById("iDiv").innerHTML = "Fudeu..."
+
+         }
+
+      }
+              
+
+      
+
+   </script>
+
+</html>

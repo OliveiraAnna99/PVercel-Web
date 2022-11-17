@@ -1,0 +1,28 @@
+{
+  "name": "next-0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "next": "^12.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^1.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliveiraAnna99/PWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OliveiraAnna99/PWeb/issues"
+  },
+  "homepage": "https://github.com/OliveiraAnna99/PWeb#readme",
+  "description": ""
+}

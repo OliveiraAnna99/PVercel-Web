@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>   
+
+   <head>
+
+      <meta charset="UTF-8">      
+
+   </head>
+   
+   <body>
+
+      <div id="btn"><button onclick="carregarDiv()">Carregando cervejas...</button></div>            
+      <div id="exibirCerveja"></div>
+   </body>   
+   <script>
+    var constante = 2;
+    var cont = 0;
+      function carregarDiv(){
+      
+         let contador = constante + cont;
+         //alert(contador);
+         //alert(contador/2);
+         if(contador%2 == 0){
+            let div = document.getElementById("exibirCerveja")
+            div.innerHTML = `<h1>Guinness</h1>`
+            div.style.color = "#333333";
+            div.style.transition = "opacity 1s linear 0s";
+            div.style.opacity = "1";
+           
+         }else if(contador%2 == 1){
+            //alert(contador);
+            let div = document.getElementById("exibirCerveja")
+            div.style.transition = "opacity 0.5s linear 0s";
+            div.style.opacity = "0";
+         }
+         cont++;
+         
+      }
+        
+   </script>
+</html>
