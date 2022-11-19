@@ -1,7 +1,8 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-export default function Movies3(){
 
+export default function Movies3(){
+  
     const [url, setUrl] = useState('')
     const {data, error} = useSWR(url, theFetcher)
     const onClickHandler = (e) => {
@@ -35,7 +36,8 @@ export function TheMovies({data,show}){
 
     return (
         <div>
-            { data.Search.map( (m) => <div>{m.Title} --- {m.Year}</div>  ) }            
+            { data.Search.map( (m) => <div><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center> </div>  ) }      
+      
         </div>
 
     )
@@ -50,3 +52,4 @@ export function TheLink({url, handler}){
     )
 
 }
+
