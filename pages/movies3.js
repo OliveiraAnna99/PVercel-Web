@@ -1,6 +1,9 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-
+import dynamic from 'next/dynamic'
+const Navbar = dynamic(() => import('./components/navbar'), {
+    suspense: true,
+  });
 export default function Movies3(){
   
     const [url, setUrl] = useState('')
@@ -35,10 +38,12 @@ export function TheMovies({data,show}){
     if (data.Search === '' ) return (<div>carregando...</div>)
 
     return (
-        <div>
-            { data.Search.map( (m) => <div><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center> </div>  ) }      
+            <div>
+                 
+                { data.Search.map( (m) => <div><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center> </div>  ) }      
+        
+            </div>
       
-        </div>
 
     )
 }
@@ -47,6 +52,7 @@ export function TheLink({url, handler}){
 
     return (
         <div>
+            <Navbar/>
             <a href="/movies3.js" onClick={handler}> {url === '' ? 'Mostrar' : 'Ocultar'} </a>
         </div>
     )
