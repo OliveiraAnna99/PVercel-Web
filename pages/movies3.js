@@ -7,7 +7,7 @@ export default function Movies3(){
     const onClickHandler = (e) => {
 
         e.preventDefault()
-        if (url === '') setUrl('http://www.omdbapi.com/?apikey=218bd007&s=bagdad')
+        if (url === '') setUrl('https://www.omdbapi.com/?apikey=218bd007&s=bagdad')
         else setUrl('')
 
     }
