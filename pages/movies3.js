@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-
+import classes from '../styles/movies.module.css'
 
 export default function Movies3(){
   
@@ -37,7 +37,9 @@ export function TheMovies({data,show}){
 
     return (
             <div>
-                { data.Search.map( (m) => <div><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center> </div>  ) }      
+                <div className={`${classes.containerMovie}`}>
+                { data.Search.map( (m) => <div className={`${classes.contentMovie}`}><center><img src={m.Poster}></img></center><br></br><div ><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center></div> </div>  ) }   
+                </div>   
             </div>
       
 

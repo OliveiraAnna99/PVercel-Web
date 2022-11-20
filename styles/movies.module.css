@@ -1,0 +1,14 @@
+.containerMovie{
+    height: 100px;
+    background-color: aliceblue;
+    width: 10%;
+    color: black;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.contentMovie{
+    padding: auto;
+    border-radius: 12px;
+}
