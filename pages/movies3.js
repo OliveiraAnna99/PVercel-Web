@@ -4,6 +4,10 @@ import dynamic from 'next/dynamic'
 const Navbar = dynamic(() => import('./components/navbar'), {
     suspense: true,
   });
+const Carrousel = dynamic(() => import('./components/carrousel'), {
+    suspense: true,
+});
+
 export default function Movies3(){
   
     const [url, setUrl] = useState('')
@@ -39,9 +43,7 @@ export function TheMovies({data,show}){
 
     return (
             <div>
-                 
                 { data.Search.map( (m) => <div><center>{m.Title} - {m.Year} - {m.imdbID} <br/></center> </div>  ) }      
-        
             </div>
       
 
@@ -52,7 +54,8 @@ export function TheLink({url, handler}){
 
     return (
         <div>
-            <Navbar/>
+              <Navbar/>
+              <Carrousel/>
             <a href="/movies3.js" onClick={handler}> {url === '' ? 'Mostrar' : 'Ocultar'} </a>
         </div>
     )

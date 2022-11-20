@@ -1,8 +1,11 @@
-import { useRouter } from 'next/router'
-
+import dynamic from 'next/dynamic'
+const Navbar = dynamic(() => import('../components/navbar'), {
+    suspense: true,
+  });
 export default function Movies({data}){
     return (
         <div>
+            <Navbar />
             <div>
             <img src={data.Poster}></img><br/>
                 {data.Title} --- {data.Year}
