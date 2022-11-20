@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css"
+
 function Navbar(){
     return(
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

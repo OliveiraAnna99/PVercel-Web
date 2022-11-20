@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css"
+
 import dynamic from 'next/dynamic'
 const Title = dynamic(() => import('./text'), {
     suspense: true,

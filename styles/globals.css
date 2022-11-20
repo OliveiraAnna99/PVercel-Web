@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body, div{
+    font-family: 'Bebas Neue', cursive;
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1,h2, h3, h4, h5, h6{
+    color: whitesmoke;
+}
+
+section {
+    padding-top: 150px;
+}

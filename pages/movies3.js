@@ -1,12 +1,6 @@
 import useSWR from 'swr'
 import {useState} from 'react'
-import dynamic from 'next/dynamic'
-const Navbar = dynamic(() => import('./components/navbar'), {
-    suspense: true,
-  });
-const Carrousel = dynamic(() => import('./components/carrousel'), {
-    suspense: true,
-});
+
 
 export default function Movies3(){
   
@@ -54,8 +48,6 @@ export function TheLink({url, handler}){
 
     return (
         <div>
-              <Navbar/>
-              <Carrousel/>
             <a href="/movies3.js" onClick={handler}> {url === '' ? 'Mostrar' : 'Ocultar'} </a>
         </div>
     )

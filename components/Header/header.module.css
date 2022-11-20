@@ -1,0 +1,40 @@
+
+.header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.nav_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.logo h1 span {
+    color: rgb(226, 37, 37);
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    column-gap: 2.8rem;
+}
+
+.nav_menu a{
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav_menu a:hover{
+    color: rgb(226, 37, 37);
+}
+
